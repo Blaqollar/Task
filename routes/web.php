@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CsvImportController;
+use App\Http\Controllers\CsvImportFormController;
+use App\Http\Controllers\EmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/import-csv', [CsvImportController::class, 'import'])->name('csv.import');
+Route::get('/import-csv-form', [CsvImportFormController::class, 'showForm'])->name('csv.import.form');
+Route::get('/send-emails', [EmailController::class, 'sendEmails']);
