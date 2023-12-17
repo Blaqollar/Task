@@ -33,7 +33,7 @@ Before you begin, ensure you have the following installed on your machine:
     composer install
     ```
 
-4. Install JavaScript dependencies using NPM or Yarn:
+4. Install JavaScript dependencies and Vue.js:
 
     ```bash
     npm install
@@ -59,6 +59,12 @@ Before you begin, ensure you have the following installed on your machine:
     php artisan migrate --seed
     ```
 
+8. Compile the assets using Laravel Mix:
+
+    ```bash
+    npm run dev
+    ```
+
 ## Usage
 
 1. Start the development server:
@@ -69,11 +75,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 2. Open your browser and visit [http://localhost:8000](http://localhost:8000)
 
-3. You can access the EmailController endpoint to dispatch the job:
-
-    ```bash
-    php artisan test
-    ```
+3. You can now use Vue.js components and features within your views.
 
 ## Unit Testing
 
